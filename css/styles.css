@@ -587,6 +587,7 @@ ul{
         background: #FFFFFF;
                
 }
+
 .box-project::before{
         content: '';
         display: inline-block;
@@ -597,8 +598,9 @@ ul{
         background: rgba(33, 150, 243, 0.9);
         opacity: 0;
 }
-.box-project::before:hover{
+.box-project:hover::before{
         opacity: 1;
+        
 }
 .box-project:hover{
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
