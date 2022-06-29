@@ -97,7 +97,7 @@ ul{
 .link-2:focus, .link-3:focus{
         color: #2196F3;
 }
-.link-1{
+.link-1, .link-2{
         position: relative;
 }
 .link-1.studio::after{
@@ -106,11 +106,23 @@ ul{
         width: 100%;
         height: 4px;
 
-        
+        bottom: -32px;
         background: #2196F3;
         border-radius: 2px;
         position: absolute;
 }
+.link-2.portfol::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 4px;
+
+        bottom: -32px;
+        background: #2196F3;
+        border-radius: 2px;
+        position: absolute;
+}
+
 /*email and tel*/
 .email, .tel{
         font-style: normal;
@@ -578,30 +590,43 @@ ul{
         padding-left: 0;
         margin-top: 50px;
         margin-bottom: 0;
-        gap: 30px;      
+        gap: 30px;
 } 
-
 .box-project{
         display: block;
         margin: auto;
-        background: #FFFFFF;
-               
+        background: #FFFFFF;              
 }
-
-.box-project::before{
-        content: '';
-        display: inline-block;
+.product-overlay{
         position: absolute;
-
         width: 370px;
         height: 294px;
         background: rgba(33, 150, 243, 0.9);
-        opacity: 0;
+        transform:translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;        
 }
-.box-project:hover::before{
-        opacity: 1;
+.product-overlay:hover{
+        transform: translateY(0);
+        
         
 }
+.description{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0.03em;
+        
+        color: #FFFFFF;
+        display: block;
+
+        
+        padding: 63px 24px ;
+        position: absolute;
+
+       
+}
+
 .box-project:hover{
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
